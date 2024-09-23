@@ -1,142 +1,74 @@
-//import stuff here
-
 import java.util.Scanner;
 
 public class Program8 {
     public static void main(String[] args) {
         int num1;
         int num2;
-        
-        
-        
-        System.out.println("Enter the number 1: ");
-        System.out.println();
-        
-        Scanner numScanner1 = new Scanner(System.in);
-        num1 = numScanner1.nextInt();
-        System.out.println();
-        System.out.println("Enter the number 2: ");
-        System.out.println();
 
-        Scanner numScanner2 = new Scanner(System.in);
-        num2 = numScanner2.nextInt();
-        
-        
-        Calculator calculate = new Calculator(num1, num2);
-        System.out.println();
-        System.out.println("The Sum Is:  " + calculate.getSum());
-        System.out.println();
-        System.out.println("The Difference Is: " + calculate.getDifference());
-        System.out.println();
-        System.out.println("The Product Is: " + calculate.getProduct());
-        System.out.println();
-        System.out.println("The Average Is: " + calculate.getAverage());
-        System.out.println();
-        System.out.println("The Absolute Value Is: " + calculate.getAbsoluteValue());
-        System.out.println();
-        System.out.println("The Maximum Value Is: " + calculate.getMaximumValue());
-        System.out.println();
-        System.out.println("The Minimum Value Is: " + calculate.getMinimumValue());
-        System.out.println();
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.print("Enter the first number: ");
+        num1 = scanner.nextInt();
+
+        System.out.print("Enter the second number: ");
+        num2 = scanner.nextInt();
+
+        Calculator calculator = new Calculator(num1, num2);
         
-        
+        System.out.println("The Sum Is: " + calculator.getSum());
+        System.out.println("The Difference Is: " + calculator.getDifference());
+        System.out.println("The Product Is: " + calculator.getProduct());
+        System.out.println("The Average Is: " + calculator.getAverage());
+        System.out.println("The Absolute Value Is: " + calculator.getAbsoluteValue());
+        System.out.println("The Maximum Value Is: " + calculator.getMaximumValue());
+        System.out.println("The Minimum Value Is: " + calculator.getMinimumValue());
     }
 }
-//Paste console output below:
-/*
-Enter the number 1: 
 
-13
+class Calculator {
+    private int sum;
+    private int difference;
+    private int product;
+    private double average;
+    private int absoluteValue;
+    private int maximumValue;
+    private int minimumValue;
 
-Enter the number 2: 
-
-20
-
-The Sum Is: 33
-
-The Difference Is: -7
-
-The Product Is: 260
-
-The Average Is: 16.5
-
-The Absolute Value Is: 7
-
-The Maximum Value Is: 20
-
-The Minimum Value Is: 13
-
-
-*/
-
-
---------------------------------------------------------------------------------------------------------------------------------
-
-public class Calculator
-{
-    
-    int Sum;
-    
-    int Difference;
-    
-    int Product;
-    
-    double Average;
-    
-    int AbsoluteValue;
-    
-    int MaximumValue;
-    
-    int MinimumValue;
-
-    
-    public Calculator(int num1, int num2)
-    {
-        
-        Sum = num1 + num2;
-        
-        Difference = num1 - num2;
-        
-        Product = num1 * num2;
-        
-        Average = (num1 + num2) / 2.0;
-        
-        AbsoluteValue = Math.abs(num1 - num2);
-        
-        MaximumValue = (num1 + num2 + AbsoluteValue) / 2;
-        
-        MinimumValue = (num1 + num2 - AbsoluteValue) / 2;
-        
-        
+    public Calculator(int num1, int num2) {
+        sum = num1 + num2;
+        difference = num1 - num2;
+        product = num1 * num2;
+        average = (num1 + num2) / 2.0;
+        absoluteValue = Math.abs(num1 - num2);
+        maximumValue = Math.max(num1, num2);
+        minimumValue = Math.min(num1, num2);
     }
 
     public int getSum() {
-    return Sum;
-}
-
-    public int getDifference() {
-    return Difference;
-}
-
-    public int getProduct() {
-    return Product;
-}
-
-    public double getAverage() {
-    return Average;
-}
-
-    public int getAbsoluteValue() {
-    return AbsoluteValue;
-}
-
-    public int getMaximumValue() { 
-    return MaximumValue;
-}
-
-    public int getMinimumValue() {
-    return MinimumValue;
-}
+        return sum;
     }
 
+    public int getDifference() {
+        return difference;
+    }
+
+    public int getProduct() {
+        return product;
+    }
+
+    public double getAverage() {
+        return average;
+    }
+
+    public int getAbsoluteValue() {
+        return absoluteValue;
+    }
+
+    public int getMaximumValue() {
+        return maximumValue;
+    }
+
+    public int getMinimumValue() {
+        return minimumValue;
+    }
+}
