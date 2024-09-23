@@ -5,24 +5,21 @@ import java.util.Scanner;
 public class Program8 {
     public static void main(String[] args) {
         int num1;
-        
         int num2;
         
         
         
-        System.out.println("Enter number 1: ");
+        System.out.println("Enter the number 1: ");
         System.out.println();
         
-        Scanner numberScanner1 = new Scanner(System.in);
-        num1 = numberScanner1.nextInt();
+        Scanner numScanner1 = new Scanner(System.in);
+        num1 = numScanner1.nextInt();
         System.out.println();
-        
-    
-        System.out.println("Enter number 2: ");
+        System.out.println("Enter the number 2: ");
         System.out.println();
 
-        Scanner numberScanner2 = new Scanner(System.in);
-        num2 = numberScanner2.nextInt();
+        Scanner numScanner2 = new Scanner(System.in);
+        num2 = numScanner2.nextInt();
         
         
         Calculator calculate = new Calculator(num1, num2);
@@ -48,11 +45,11 @@ public class Program8 {
 }
 //Paste console output below:
 /*
-Enter number 1: 
+Enter the number 1: 
 
 13
 
-Enter number 2: 
+Enter the number 2: 
 
 20
 
