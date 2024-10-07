@@ -25,6 +25,8 @@ public class Program8 {
     }
 }
 
+
+//Cant have 2 classes in one file dude
 class Calculator {
     private int sum;
     private int difference;
